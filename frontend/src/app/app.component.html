@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div style="padding: 20px" class="row">
+    <div class="col-12 header-title text-center"><h1>SMARTMeter Dashboard</h1></div>
+    <div class="padding col-6">
+      <div class="box">
+        <div class="title">
+          <p>This is the temperature and humidity chart</p>
+        </div>
+        <app-linechart style="height: 100px"></app-linechart>
+      </div>
+    </div>
+    <div class="padding col-6">
+      <div class="box">
+        <div class="title">
+          <p>All Available Power Data</p>
+        </div>
+        <app-energychart></app-energychart>
+      </div>
+    </div>
+    <div class="padding col-6">
+      <div class="box">
+        <div class="title">
+          <p> Power data from the last hour </p>
+        </div>
+        <app-shortenergychart></app-shortenergychart>
+      </div>
+    </div>
+    <div class="padding col-6">
+      <div class="box">
+        <div class="title">
+          <p> General info </p>
+        </div>
+        <app-info></app-info>
+      </div>
+    </div>
+  </div>
+</div>

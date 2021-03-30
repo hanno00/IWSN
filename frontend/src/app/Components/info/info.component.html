@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div *ngIf="ready" class="box">
+                <h1>Power data:</h1>
+                Received from the net: {{latestEnergy.Actual_electricity_power_delivered_plus}}<br>
+                Delivered to the net: {{latestEnergy.Actual_electricity_power_received_min}}<br>
+                Temperature: {{latestTemp.temp}}°C<br>
+                Humidity: {{latestTemp.hum}}%<br>
+                Amount of power used from the net: {{hourlyPowerUsed | number:'1.2-2' }} kWh<br>
+                Amount of power send back: {{hourlySent | number:'1.2-2' }} kWh<br>
+                Netto money in the last hour: €{{hourlyNettoCosts | number:'1.2-2' }}
+            </div>
+            <button (click)="getLatestData()" type="button" class="btn btn-dark">Refresh</button>
+        </div>
+    </div>
+</div>
